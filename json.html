@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--To create a responsive website,-->
+<style>
+.l_class {
+  background-color: white;
+  color: black;
+  padding: 2px;
+  text-align: center;
+  width: 150px;
+} 
+.t_class
+ {
+  background-color: white;
+  color: black;
+  padding: 2px;
+  text-align: center;
+  width: 300px;
+  border: 4px;
+ }
+  table, th, td {
+  border: 1px solid black;
+
+} 
+
+</style>
+
+</head>
+<body>
+
+<h2>Welcome  To Login Page</h2>
+<p id="p_demo"></p>
+<table id="table1" class=>
+    <table id="table1" class="t_class">
+    <tr id=row1>
+        <td id="00">Name of Student</td>
+        <td id="01">Age</td>
+        <td id="02">Qualification</td>
+    </tr>
+ <!-- <tr>
+        <td id="10"></td>
+        <td id="11"></td>
+        <td id="12"></td>
+           </tr>
+           <tr>
+            <td id="20"></td>
+            <td id="21"></td>
+            <td id="22"></td>
+               </tr>-->
+           <tbody id="mytablebody"></tbody>
+        </table>
+<script>
+// JSON
+//const myJSON = '{"name":"John", "age":30, "cars":["Ford", "BMW", "Fiat"]}';
+//const myJSON = [{ "name":"a", "age":30,"educatin_detail":"bca"},
+//{ "name":"b", "age":30,"educatin_detail":"mca"},
+//{ "name":"c", "age":30,"educatin_detail":"bba"}
+
+//];
+var myarr = [{ 'name':'a', 'age':'30','educatin_detail':'bca1'},
+{ 'name':'b', 'age':'40','educatin_detail':'mca1'},
+{ 'name':'c', 'age':'50','educatin_detail':'bca2'},
+{ 'name':'d', 'age':'60','educatin_detail':'mca2'},
+{ 'name':'e', 'age':'70','educatin_detail':'bca3'},
+{ 'name':'f', 'age':'80','educatin_detail':'mca3'},
+{ 'name':'g', 'age':'90','educatin_detail':'bca4'},
+{ 'name':'h', 'age':'100','educatin_detail':'mca4'}
+];
+   //const myObj = JSON.parse(myJSON1);
+//const myJSON = '{"name":"Johny", "age":30,  "educatin_detail":["bca", "mca", "mphil"]}';
+//const myObj = JSON.parse(myJSON);
+
+//document.getElementById("p_demo").innerHTML = myObj.educatin_detail[0];
+
+//document.getElementById("10").innerHTML = myarr[0].name   
+//document.getElementById("11").innerHTML = myarr[0].age
+//document.getElementById("12").innerHTML = myarr[0].educatin_detail
+//document.getElementById("20").innerHTML = myarr[1].name   
+//document.getElementById("21").innerHTML = myarr[1].age
+//document.getElementById("22").innerHTML = myarr[1].educatin_detail
+//youtube according
+
+buildtable(myarr)
+function buildtable(data){
+var table = document.getElementById('mytablebody')
+for(var i = 0; i < data.length ; i++){
+var row =  `<tr>
+ <td>${data[i].name}</td>
+   <td>${data[i].age}</td>
+ <td>${data[i].educatin_detail}</td>
+</tr>`
+   // table.innerHTML +="1"+" "
+    table.innerHTML +=row
+}
+}
+buildTable(myarr)
+	function buildTable(data){
+		var table = document.getElementById('mytablebody')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].name}</td>
+							<td>${data[i].age}</td>
+							<td>${data[i].educatin_detail}</td>
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
